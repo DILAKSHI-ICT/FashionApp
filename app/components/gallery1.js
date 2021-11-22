@@ -29,7 +29,7 @@ const ENTRIES1 = [
   {
     title: 'Accessories for Men offering a great Customer Experience.',
     subtitle: 'Lorem ipsum dolor sit amet',
-    illustration: 'https://www.wearetheincrowd.com/wp-content/uploads/2019/11/Clothing-Retail-Display-201909-001.jpg',
+    illustration: 'https://c1.wallpaperflare.com/preview/924/432/853/store-clothing-shop-bouique.jpg',
   },
   {
     title: 'Check out the latest promotions and offers at Chanu Fashions',

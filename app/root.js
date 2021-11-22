@@ -1,7 +1,8 @@
-import {StatusBar} from 'expo-status-bar'; 
+
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
+import MenuButton from './components/menuButton';
 
 const slides = [
   {
@@ -50,7 +51,7 @@ const slides = [
     key: 'seven',
     title: 'Limited Stock ',
     text: 'Lorem ipsum dolor sit amet consecte tuer adipsing elit sed diam monum my nibh eusimod eltor',
-    image: require("./assets/Images/7.jpg"),
+    image: require("./assets/Images/8.jpg"),
   },
 ];
 
@@ -58,20 +59,20 @@ export default class App extends React.Component {
   state = {showHomePage: false};
   _renderItem = ({item}) => {
     return (
-      <View style={{flex: 1}}>
+      <><View style={{ flex: 1 }}>
         <Image
           source={item.image}
           style={{
             resizeMode: 'cover',
             height: '73%',
             width: '100%',
-          }}
-        />
+            backgroundColor: '#e2e2e1',
+          }} />
         <Text
           style={{
-            paddingTop: 25,
-            paddingBottom: 10,
-            fontSize: 28,
+            paddingTop: 40,
+            paddingBottom: 60,
+            fontSize: 34,
             fontWeight: 'bold',
             color: '#21465b',
             alignSelf: 'center',
@@ -81,14 +82,18 @@ export default class App extends React.Component {
         </Text>
 
         <Text style={{
-            textAlign: 'center',
-            color: '#b5b5b5',
-            fontSize: 15,
-            paddingHorizontal: 30,
-          }}>
+          textAlign: 'center',
+          paddingBottom: 60,
+          color: '#b5b5b5',
+          fontSize: 20,
+          fontWeight: 'bold',
+          paddingHorizontal: 10,
+        }}>
           {item.text}
         </Text>
-      </View>
+      </View><View>
+          <MenuButton onPress={this.props.handleSubmit} />
+        </View></>
     );
   };
   render() {
@@ -100,10 +105,12 @@ export default class App extends React.Component {
           renderItem={this._renderItem}
           data={slides}
           activeDotStyle={{
-            backgroundColor: '#21465b',
-            width: 30,
+            backgroundColor: '#333',
+            width: 20,
           }}
         />
+
+        
       );
     }
   }
@@ -111,8 +118,8 @@ export default class App extends React.Component {
 
 const style = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#f1f1',
+    flex: 1.5,
+    backgroundColor: '#e2e2e1',
     alignItems: 'center',
     justifyContent: 'center',
   },

@@ -25,11 +25,11 @@ export default class WomenClothes extends Component {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor:  '#fdf4dd',
+    backgroundColor:  '#e2e2e1',
   },
   header: {
     flex: 3,
-    backgroundColor: '#fdf4dd',
+    backgroundColor: '#e2e2e1',
   },
   container: {
     alignItems: 'center',
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     flex: 0.6,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
-    backgroundColor: '#EECD5B',
+    backgroundColor: '#7d3c92',
   },
   images: {
     width: 70,
