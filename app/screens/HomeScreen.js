@@ -8,32 +8,67 @@ import {
 import FormButton from '../components/FormButton';
 import { AuthContext } from '../navigation/AuthProvider';
 
+import MenuButton from '../components/menuButton';
+
 const HomeScreen = () => {
 
     const {user, logout} = useContext(AuthContext);
 
     return (
-        <View style = {StyleSheet.container}>
-            <Text style = {StyleSheet.text}>Welcome {user.uid}</Text>
-            <FormButton buttonTitle = 'Logout' onpress = {() => logout()} />
-        </View>
+        <><View style={style.body}>
+        <Text style={style.headerText}>WELCOME TO THE CHANU FASHIONS</Text>
+        
+            
+            <FormButton buttonTitle = 'Logout' onPress = {() => logout()} />
+        
+
+        
+            <View style={style.logingButton}>
+                <MenuButton text="Women's Fashion" />
+                <MenuButton text="Men's Fashion" />
+                <MenuButton text="Kid's Fashion" />
+                <MenuButton text="Shoes Corner" />
+                <MenuButton text="Watch Center" /> 
+            </View>
+        </View></>
+
     );
 
 }
 
-export default HomeScreen;
 
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: '#f9fafd',
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 20,
-    },
 
+const style = StyleSheet.create({
+   
     text: {
         fontSize: 20,
         color: '#333333'
-    }
+    },
+    body: {
+        flex: 1,
+        backgroundColor: '#BF93C8'
+    },
+    
+    headerText: {
+        color: '#333',
+        fontSize:22,
+        top: 55,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },        
+    
+    logingButton: {
+        width: 435,
+        height: 550,
+        backgroundColor: '#804179',
+        top: -600,
+        borderTopLeftRadius: 50,
+        borderTopRightRadius: 50,
+    
+
+
+      }
+    
 });
+
+export default HomeScreen;

@@ -22,12 +22,12 @@ export default function MenuButton({text, onPress}) {
   const styles = StyleSheet.create({
     button: {
         backgroundColor: '#e2e2e1',
-        width: 180,
-        height: 40,
-        margin:28,
+        width: 220,
+        height: 60,
+        margin:2,
         borderRadius: 15,
         left: 100,
-        marginTop:55,
+        marginTop: 40,
         alignItems: 'center',
         
     },
@@ -36,6 +36,8 @@ export default function MenuButton({text, onPress}) {
         fontSize: 20,
         fontWeight: 'bold',
         color: '#333',
+        textAlign: 'center',
+        top: 13,
     }
 
     
