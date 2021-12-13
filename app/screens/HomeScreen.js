@@ -5,10 +5,10 @@ import {
     StyleSheet
 } from 'react-native';
 
-import FormButton from '../components/FormButton';
 import { AuthContext } from '../navigation/AuthProvider';
 
 import MenuButton from '../components/menuButton';
+import LogoutButton from '../components/LogoutButton';
 
 const HomeScreen = () => {
 
@@ -19,7 +19,7 @@ const HomeScreen = () => {
         <Text style={style.headerText}>WELCOME TO THE CHANU FASHIONS</Text>
         
             
-            <FormButton buttonTitle = 'Logout' onPress = {() => logout()} />
+            <LogoutButton buttonTitle = 'Logout' onPress = {() => logout()} />
         
 
         

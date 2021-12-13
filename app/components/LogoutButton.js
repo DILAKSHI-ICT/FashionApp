@@ -7,7 +7,7 @@ import {
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import {windowHeight, windowWidth} from '../utils/Dimention';
 
-const FormButton = ({buttonTitle, ...rest}) => {
+const LogoutButton = ({buttonTitle, ...rest}) => {
     return (
       <TouchableOpacity style={styles.buttonContainer} {...rest}>
         <Text style={styles.buttonText}>{buttonTitle}</Text>
@@ -15,11 +15,11 @@ const FormButton = ({buttonTitle, ...rest}) => {
     );
   };
 
-export default FormButton;
+export default LogoutButton;
 
 const styles = StyleSheet.create({
     buttonContainer: {
-        marginTop: 10,
+        marginTop: 660,
         width: '100%',
         height: windowHeight / 15,
         backgroundColor: '#2e64e5',
