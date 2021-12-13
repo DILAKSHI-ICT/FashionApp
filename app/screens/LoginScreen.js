@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {
     View,
     Text,
@@ -11,10 +11,13 @@ import {
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
 import SocialButton from '../components/SocialButton';
+import {AuthContext} from '../navigation/AuthProvider';
 
 const LoginScreen = ({navigation}) => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+
+    const {login} = useContext(AuthContext);
 
     return (
         <View style = {styles.container}>
@@ -44,7 +47,7 @@ const LoginScreen = ({navigation}) => {
 
             <FormButton
                 buttonTitle = "Sign In"
-                onPress = {() => alert('Sign In Clicked!')}
+                onPress = {() => login(email, password)}
             />
 
             <TouchableOpacity style = {styles.forgotButton} onPress = {() => navigation.navigate('Signup')}>
@@ -80,7 +83,7 @@ export default LoginScreen;
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#f9fafd',
+        backgroundColor: '#e2e2e1',
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
@@ -98,6 +101,7 @@ const styles = StyleSheet.create({
         fontSize: 28,
         marginBottom: 10,
         color: '#051d5f',
+        fontWeight: 'bold',
     },
 
     navButton: {

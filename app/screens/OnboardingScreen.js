@@ -57,22 +57,22 @@ const OnboardingScreen = ({navigation}) => {
           {
             backgroundColor: '#f09183',
             image: <Image source={require('../assets/home1.png')} />,
-            title: 'Onboarding 1',
-            subtitle: 'Done with React Native Onboarding Swiper',
+            title: 'CHANU FASHIONS',
+            subtitle: 'Buy Luxury Clothes',
           },
 
           {
             backgroundColor: '#fdeb93',
             image: <Image source={require('../assets/home2.png')} />,
-            title: 'Onboarding 2',
-            subtitle: 'Done with React Native Onboarding Swiper',
+            title: 'TRENDING FASHION OUTLET',
+            subtitle: 'Choose Your Fashion Type',
           },
 
           {
             backgroundColor: '#e9bcbe',
             image: <Image source={require('../assets/home3.png')} />,
-            title: 'Onboarding',
-            subtitle: 'Done with React Native Onboarding Swiper',
+            title: 'SAFE & FASTEST DELIVERY',
+            subtitle: 'Get The Best One',
           },
   ]}
     />
@@ -85,11 +85,14 @@ const styles = StyleSheet.create ({
     container: {
         flex : 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        
     },
-
+   
     button_text: {
         fontSize: 16,
+        fontWeight: 'bold',
+        color: '#333'
       },
     Button: {
         marginHorizontal: 10,

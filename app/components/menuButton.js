@@ -21,16 +21,25 @@ export default function MenuButton({text, onPress}) {
   
   const styles = StyleSheet.create({
     button: {
-        backgroundColor: '#7d3c92',
-        width: 80,
-        height: 50,
-        margin:30,
-        borderRadius: 20,
-        left: 312,
-        marginTop:5,
+        backgroundColor: '#e2e2e1',
+        width: 180,
+        height: 40,
+        margin:28,
+        borderRadius: 15,
+        left: 100,
+        marginTop:55,
+        alignItems: 'center',
+        
     },
 
+    button_text: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#333',
+    }
+
     
-    
-  });
+});
+
+
   

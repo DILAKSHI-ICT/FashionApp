@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "446051096272",
+    "project_id": "chanufashions-f9c3f",
+    "storage_bucket": "chanufashions-f9c3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446051096272:android:85388a0d96898b2fa1f0d5",
+        "android_client_info": {
+          "package_name": "com.chanufashions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446051096272-gu4rf3tdpaubq7kmu2r4i9h9ch4f474c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoGWe_hAa0wNrHUEv8def8U62kFwON-eM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446051096272-gu4rf3tdpaubq7kmu2r4i9h9ch4f474c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

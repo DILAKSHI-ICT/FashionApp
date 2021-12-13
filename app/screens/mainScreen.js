@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import {View, StyleSheet, Image} from 'react-native';
 import TextButton from '../components/TextButton';
-import TextArea_text from '../components/Text_Areas';
 
-export default class Main_Screen extends Component {
+export default class MainScreen extends Component {
   render() {
     return (
       <View style={styles.screen}>
@@ -46,3 +45,4 @@ const styles = StyleSheet.create({
     flex: 0.5,
   },
 });
+

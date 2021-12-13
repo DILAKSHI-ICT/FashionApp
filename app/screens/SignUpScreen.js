@@ -11,11 +11,15 @@ import {
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
 import SocialButton from '../components/SocialButton';
+import { useContext } from 'react/cjs/react.development';
+import { AuthContext } from '../navigation/AuthProvider';
 
 const SignUpScreen = ({navigation}) => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [confirmPassword, setConfirmPassword] = useState();
+
+    const {register} = useContext(AuthContext);
 
     return (
         <View style = {styles.container}>
@@ -50,7 +54,7 @@ const SignUpScreen = ({navigation}) => {
 
             <FormButton
                 buttonTitle = "Sign Up"
-                onPress = {() => alert('Sign Up Clicked!')}
+                onPress = {() => register(email, password) }
             />
 
             <View style = {styles.textPrivate}>
@@ -91,7 +95,7 @@ export default SignUpScreen;
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#f9fafd',
+        backgroundColor: '#e2e2e1',
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
@@ -100,9 +104,10 @@ const styles = StyleSheet.create({
 
     text: {
         fontFamily: 'kufam-SemiBoldItalic',
-        fontSize: 28,
-        marginBottom: 10,
+        fontSize: 32,
+        marginBottom: 45,
         color: '#051d5f',
+        fontWeight: 'bold',
     },
 
     navButton: {
