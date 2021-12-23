@@ -6,11 +6,11 @@ import {
 } from 'react-native';
 
 import { AuthContext } from '../navigation/AuthProvider';
-
 import MenuButton from '../components/menuButton';
 import LogoutButton from '../components/LogoutButton';
 
-const HomeScreen = () => {
+
+const HomeScreen = ({navigation}) => {
 
     const {user, logout} = useContext(AuthContext);
 
@@ -24,11 +24,11 @@ const HomeScreen = () => {
 
         
             <View style={style.logingButton}>
-                <MenuButton text="Women's Fashion" />
-                <MenuButton text="Men's Fashion" />
-                <MenuButton text="Kid's Fashion" />
-                <MenuButton text="Shoes Corner" />
-                <MenuButton text="Watch Center" /> 
+                <MenuButton text="Women's Fashion" onPress={() => navigation.navigate('WomenItems')}/>
+                <MenuButton text="Men's Fashion" onPress={() => navigation.navigate('MenItems')}/>
+                <MenuButton text="Kid's Fashion" onPress={() => navigation.navigate('KidsItems')}/>
+                <MenuButton text="Shoes Corner" onPress={() => navigation.navigate('Footware')}/>
+                <MenuButton text="Watch Center" onPress={() => navigation.navigate('watches')}/> 
             </View>
         </View></>
 
@@ -46,7 +46,7 @@ const style = StyleSheet.create({
     },
     body: {
         flex: 1,
-        backgroundColor: '#BF93C8'
+        backgroundColor: '#E391A9'
     },
     
     headerText: {
@@ -60,7 +60,7 @@ const style = StyleSheet.create({
     logingButton: {
         width: 435,
         height: 550,
-        backgroundColor: '#804179',
+        backgroundColor: '#CB3461',
         top: -600,
         borderTopLeftRadius: 50,
         borderTopRightRadius: 50,
