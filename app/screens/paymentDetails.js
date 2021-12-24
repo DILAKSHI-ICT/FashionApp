@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   text4: {
-    color: '#8a246b',
+    color: '#333',
     fontSize: 18,
     textAlign: 'left',
     fontFamily: 'Poppins',
