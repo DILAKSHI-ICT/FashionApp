@@ -1,11 +1,8 @@
 import React from 'react';
-import {View, StyleSheet, Image, Text, Pressable} from 'react-native';
+import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
 
 function WatchDetails1({navigation}) {
-  const onPressHandler = () => {
-    navigation.navigate('Book');
-  };
-
+ 
   return (
     <View style={styles.background}>
       <Text style={styles.text}>PRODUCT DETAILS</Text>
@@ -22,11 +19,13 @@ function WatchDetails1({navigation}) {
       <Text style={styles.text8}>Shape : Round, Material : Stainless steel, Glass : Scratch-resistant sapphire crystal, Case Back : Transparent case back with sapphire crystal, Dimension : Ø 40.00 mm, Material : Stainless steel, Size : M</Text>    
       <Text style={styles.text5}>Rs.8650.00</Text>
       <Text style={styles.text6}>Island Wide Delivery Available</Text>
-      <Pressable onPress={onPressHandler}>
+      
+      <TouchableOpacity onPress={() => navigation.navigate('paymentDetails')}>
         <View style={styles.logingButton}>
           <Text style={styles.text11}>Buy Now</Text>
         </View>
-      </Pressable>
+      </TouchableOpacity>
+     
     </View>
   );
 }

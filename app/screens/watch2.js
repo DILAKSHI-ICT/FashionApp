@@ -1,11 +1,8 @@
 import React from 'react';
-import {View, StyleSheet, Image, Text, Pressable} from 'react-native';
+import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
 
-function WatchDetails1({navigation}) {
-  const onPressHandler = () => {
-    navigation.navigate('Book');
-  };
-
+function WatchDetails2({navigation}) {
+ 
   return (
     <View style={styles.background}>
       <Text style={styles.text}>PRODUCT DETAILS</Text>
@@ -23,11 +20,14 @@ function WatchDetails1({navigation}) {
 </Text>    
       <Text style={styles.text5}>Rs.6950.00</Text>
       <Text style={styles.text6}>Island Wide Delivery Available</Text>
-      <Pressable onPress={onPressHandler}>
+      
+      
+      <TouchableOpacity onPress={() => navigation.navigate('paymentDetails')}>
         <View style={styles.logingButton}>
           <Text style={styles.text11}>Buy Now</Text>
         </View>
-      </Pressable>
+      </TouchableOpacity>
+
     </View>
   );
 }
@@ -163,4 +163,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default WatchDetails1;
+export default WatchDetails2;

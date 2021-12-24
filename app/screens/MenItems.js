@@ -1,7 +1,8 @@
 import React from 'react';
-import {View, StyleSheet, Image, Text, Button} from 'react-native';
+import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
 
-function MenItems(props) {
+const MenItems = ({navigation})=> {
+
   return (
     <><View style={styles.background}>
           <Text style={styles.text}>Find Your Life Style!</Text>
@@ -9,32 +10,39 @@ function MenItems(props) {
               <Text style={styles.text1}>New Arrivals</Text>
           </View>
 
-          <View style={styles.logingButton1}>
+          <TouchableOpacity onPress={() => navigation.navigate('CategoryScreen4')}>
+            <View style={styles.logingButton1}>
 
               <Text style={styles.text7}>Mandarin Collar T</Text>
               <Text style={styles.text8}>Rs 3950.00</Text>
               <Image
                   style={styles.image1}
                   source={require('../assets/Images/man1.png')} />
-          </View>
+            </View>
+          </TouchableOpacity> 
 
-          <View style={styles.logingButton2}>
+          <TouchableOpacity onPress={() => navigation.navigate('CategoryScreen5')}>
+            <View style={styles.logingButton2}>
 
               <Text style={styles.text7}>Crew Neck T-Shirt</Text>
               <Text style={styles.text8}>Rs.1950.00</Text>
               <Image
                   style={styles.image2}
                   source={require('../assets/Images/man2.png')} />
-          </View>
+            </View>
+          </TouchableOpacity> 
 
-          <View style={styles.logingButton3}>
+          <TouchableOpacity onPress={() => navigation.navigate('CategoryScreen6')}>
+            <View style={styles.logingButton3}>
               <Text style={styles.text7}>James Short Sleeve Kurtha</Text>
               <Text style={styles.text8}>Rs.2550.00</Text>
               <Image
                   style={styles.image3}
                   source={require('../assets/Images/man3.png')} />
-          </View>
+            </View>
+          </TouchableOpacity> 
 
+          <TouchableOpacity onPress={() => navigation.navigate('CategoryScreen4')}>
           <View style={styles.logingButton4}>
               <Text style={styles.text7}>Crew Neck T-Shirt</Text>
               <Text style={styles.text8}>Rs.1950.00</Text>
@@ -42,15 +50,19 @@ function MenItems(props) {
                   style={styles.image4}
                   source={require('../assets/Images/man4.png')} />
           </View>
+          </TouchableOpacity> 
 
-          <View style={styles.logingButton5}>
+          <TouchableOpacity onPress={() => navigation.navigate('CategoryScreen4')}>
+            <View style={styles.logingButton5}>
               <Text style={styles.text7}>Collar Check</Text>
               <Text style={styles.text8}>Rs.2250.00</Text>
               <Image
                   style={styles.image5}
                   source={require('../assets/Images/man5.png')} />
-          </View>
+            </View>
+          </TouchableOpacity> 
 
+          <TouchableOpacity onPress={() => navigation.navigate('CategoryScreen4')}>
           <View style={styles.logingButton6}>
               <Text style={styles.text7}>Matt Detailed Casual</Text>
               <Text style={styles.text8}>Rs.3500.00</Text>
@@ -58,7 +70,7 @@ function MenItems(props) {
                   style={styles.image6}
                   source={require('../assets/Images/man6.png')} />
           </View>
-
+          </TouchableOpacity> 
           </View></>
     
   );
@@ -67,7 +79,7 @@ function MenItems(props) {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    backgroundColor: '#BF93C8',
+    backgroundColor: '#E391A9',
   },
 
   text: {
@@ -81,7 +93,7 @@ const styles = StyleSheet.create({
   logingButton: {
     width: 435,
     height: 720,
-    backgroundColor: '#804179',
+    backgroundColor: '#CB3461',
     top: 40,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
@@ -92,40 +104,40 @@ const styles = StyleSheet.create({
     bottom: 90,
   },
   image1: {
-    width: 100,
-    height: 130,
-    top: 8,
-    left: 35,
+    width: 80,
+    height: 110,
+    bottom: 1,
+    left: 50,
   },
   image2: {
-    width: 100,
-    height: 130,
+    width: 80,
+    height: 100,
     top: 8,
-    left: 35,
+    left: 45,
   },
   image3: {
-    width: 100,
-    height: 113,
-    top: 7,
-    left: 37,
+    width: 80,
+    height: 110,
+    bottom: 13,
+    left: 65,
   },
   image4: {
-    width: 100,
-    height: 130,
-    top: 8,
-    left: 40,
+    width: 80,
+    height: 110,
+    bottom: 1,
+    left: 65,
   },
   image5: {
-    width: 100,
-    height: 130,
-    top: 10,
-    left: 40,
+    width: 80,
+    height: 110,
+    bottom: 1,
+    left: 65,
   },
   image6: {
-    width: 100,
-    height: 130,
-    top: 8,
-    left: 40,
+    width: 80,
+    height: 110,
+    bottom: 5,
+    left: 55,
   },
   text1: {
     color: '#fff',
@@ -133,17 +145,17 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     fontFamily: 'Poppins',
     fontWeight: 'bold',
-    top: 35,
+    top: 20,
     left: 78,
   },
   text2: {
     color: '#fff',
-    fontSize: 20,
+    fontSize: 16,
     textAlign: 'right',
     fontFamily: 'Poppins',
     fontWeight: 'bold',
     bottom: 3,
-    right: 30,
+    right: 28,
   },
   text3: {
     color: '#000',
@@ -151,7 +163,7 @@ const styles = StyleSheet.create({
     textAlign: 'right',
     fontFamily: 'Poppins',
     fontWeight: 'bold',
-    top: 6,
+    top: 5,
     right: 30,
   },
   text4: {
@@ -182,52 +194,52 @@ const styles = StyleSheet.create({
     left: 20,
   },
   logingButton1: {
-    width: 180,
-    height: 180,
+    width: 170,
+    height: 160,
     backgroundColor: '#fff',
-    bottom: 550,
+    bottom: 570,
     borderRadius: 20,
     left: 20,
   },
   logingButton2: {
-    width: 180,
-    height: 180,
+    width: 170,
+    height: 160,
     backgroundColor: '#fff',
-    bottom: 535,
+    bottom: 545,
     borderRadius: 20,
     left: 20,
   },
   logingButton3: {
-    width: 180,
-    height: 180,
+    width: 170,
+    height: 160,
     backgroundColor: '#fff',
-    bottom: 517,
+    bottom: 520,
     borderRadius: 15,
     left: 20,
   },
   logingButton4: {
-    width:180,
-    height: 180,
+    width:170,
+    height: 160,
     backgroundColor: '#fff',
-    bottom: 1092,
+    bottom: 1050,
     borderRadius: 20,
-    left: 230,
+    left: 240,
   },
   logingButton5: {
-    width: 180,
-    height: 180,
+    width: 170,
+    height: 160,
     backgroundColor: '#fff',
-    bottom: 1075,
+    bottom: 1025,
     borderRadius: 20,
-    left: 230,
+    left: 240,
   },
   logingButton6: {
-    width: 180,
-    height: 180,
+    width: 170,
+    height: 160,
     backgroundColor: '#fff',
-    bottom: 1057,
+    bottom: 996,
     borderRadius: 20,
-    left: 230,
+    left: 240,
   },
   text7: {
     color: '#000',
@@ -248,5 +260,4 @@ const styles = StyleSheet.create({
     left: 10,
   },
 });
-
 export default MenItems;

@@ -2,12 +2,13 @@ import React, {useContext} from 'react';
 import {
     View,
     Text,
-    StyleSheet
+    StyleSheet,
 } from 'react-native';
 
 import { AuthContext } from '../navigation/AuthProvider';
 import MenuButton from '../components/menuButton';
 import LogoutButton from '../components/LogoutButton';
+import ProfileButton from '../components/profileButton';
 
 
 const HomeScreen = ({navigation}) => {
@@ -29,6 +30,8 @@ const HomeScreen = ({navigation}) => {
                 <MenuButton text="Kid's Fashion" onPress={() => navigation.navigate('KidsItems')}/>
                 <MenuButton text="Shoes Corner" onPress={() => navigation.navigate('Footware')}/>
                 <MenuButton text="Watch Center" onPress={() => navigation.navigate('watches')}/> 
+                <ProfileButton text="Profile" onPress={() => navigation.navigate('Profile')}/> 
+
             </View>
         </View></>
 
@@ -52,7 +55,7 @@ const style = StyleSheet.create({
     headerText: {
         color: '#333',
         fontSize:22,
-        top: 55,
+        top: 65,
         fontWeight: 'bold',
         textAlign: 'center',
     },        

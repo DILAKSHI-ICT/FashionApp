@@ -15,7 +15,9 @@ export default function TextButton({text, onPress}) {
           <Text style={styles.button_text}>Let's Go</Text>
         </View>
 
-      </TouchableOpacity><TouchableOpacity onPress={onPress}>
+      </TouchableOpacity>
+      
+      <TouchableOpacity onPress={onPress}>
           <View style={styles.button2}>
             <Text style={styles.button_text}>Back</Text>
           </View>

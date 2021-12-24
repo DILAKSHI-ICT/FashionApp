@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "446051096272-nkp35p5nqdaqjuv3oi17fuvng39fum4l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chanufashions",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
           "client_id": "446051096272-gu4rf3tdpaubq7kmu2r4i9h9ch4f474c.apps.googleusercontent.com",
           "client_type": 3
         }

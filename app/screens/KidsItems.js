@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, StyleSheet, Image, Text, Button} from 'react-native';
+import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
 
-function KidsItems(props) {
+const  KidsItems = ({navigation})=> {
   return (
     <><View style={styles.background}>
           <Text style={styles.text}>Find Your Life Style!</Text>
@@ -9,6 +9,7 @@ function KidsItems(props) {
               <Text style={styles.text1}>New Arrivals</Text>
           </View>
 
+          <TouchableOpacity onPress={() => navigation.navigate('CategoryScreen7')}>
           <View style={styles.logingButton1}>
 
               <Text style={styles.text7}>Polyester Red Frock</Text>
@@ -17,7 +18,9 @@ function KidsItems(props) {
                   style={styles.image1}
                   source={require('../assets/Images/kids1.png')} />
           </View>
+          </TouchableOpacity> 
 
+          <TouchableOpacity onPress={() => navigation.navigate('CategoryScreen7')}>
           <View style={styles.logingButton2}>
 
               <Text style={styles.text7}>Sleeveless Frock</Text>
@@ -26,7 +29,9 @@ function KidsItems(props) {
                   style={styles.image2}
                   source={require('../assets/Images/kids2.png')} />
           </View>
+          </TouchableOpacity> 
 
+          <TouchableOpacity onPress={() => navigation.navigate('CategoryScreen7')}>
           <View style={styles.logingButton3}>
               <Text style={styles.text7}>Printed Cotton Frock</Text>
               <Text style={styles.text8}>Rs.1200.00</Text>
@@ -34,7 +39,9 @@ function KidsItems(props) {
                   style={styles.image3}
                   source={require('../assets/Images/kids3.png')} />
           </View>
+          </TouchableOpacity> 
 
+          <TouchableOpacity onPress={() => navigation.navigate('CategoryScreen8')}>
           <View style={styles.logingButton4}>
               <Text style={styles.text7}>Printed T Shirt</Text>
               <Text style={styles.text8}>Rs.750.00</Text>
@@ -42,7 +49,9 @@ function KidsItems(props) {
                   style={styles.image4}
                   source={require('../assets/Images/kids4.png')} />
           </View>
+          </TouchableOpacity> 
 
+          <TouchableOpacity onPress={() => navigation.navigate('CategoryScreen7')}>
           <View style={styles.logingButton5}>
               <Text style={styles.text7}>Boy T Shirt</Text>
               <Text style={styles.text8}>Rs.520.00</Text>
@@ -50,7 +59,9 @@ function KidsItems(props) {
                   style={styles.image5}
                   source={require('../assets/Images/kids5.png')} />
           </View>
+          </TouchableOpacity> 
 
+          <TouchableOpacity onPress={() => navigation.navigate('CategoryScreen7')}>
           <View style={styles.logingButton6}>
               <Text style={styles.text7}>Casual Collar T Shirt</Text>
               <Text style={styles.text8}>Rs.1250.00</Text>
@@ -58,6 +69,7 @@ function KidsItems(props) {
                   style={styles.image6}
                   source={require('../assets/Images/kids6.png')} />
           </View>
+          </TouchableOpacity> 
 
           </View></>
     
@@ -67,7 +79,7 @@ function KidsItems(props) {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    backgroundColor: '#BF93C8',
+    backgroundColor: '#E391A9',
   },
 
   text: {
@@ -81,7 +93,7 @@ const styles = StyleSheet.create({
   logingButton: {
     width: 435,
     height: 720,
-    backgroundColor: '#804179',
+    backgroundColor: '#CB3461',
     top: 40,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
@@ -92,40 +104,40 @@ const styles = StyleSheet.create({
     bottom: 90,
   },
   image1: {
-    width: 100,
-    height: 130,
-    top: 8,
+    width: 110,
+    height: 120,
+    bottom: 1,
     left: 35,
   },
   image2: {
-    width: 100,
-    height: 130,
+    width: 90,
+    height: 110,
     top: 8,
-    left: 35,
+    left: 40,
   },
   image3: {
-    width: 100,
-    height: 130,
-    top: 2,
-    left: 35,
+    width: 80,
+    height: 110,
+    bottom: 11,
+    left: 45,
   },
   image4: {
     width: 100,
-    height: 130,
-    top: 1,
-    left: 40,
+    height: 110,
+    bottom: 10,
+    left: 55,
   },
   image5: {
-    width: 100,
-    height: 130,
-    top: 10,
-    left: 40,
+    width: 80,
+    height: 110,
+    bottom: 8,
+    left: 65,
   },
   image6: {
-    width: 100,
-    height: 130,
-    top: 10,
-    left: 40,
+    width: 80,
+    height: 110,
+    bottom: 12,
+    left: 55,
   },
   text1: {
     color: '#fff',
@@ -133,17 +145,17 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     fontFamily: 'Poppins',
     fontWeight: 'bold',
-    top: 35,
+    top: 20,
     left: 78,
   },
   text2: {
     color: '#fff',
-    fontSize: 20,
+    fontSize: 16,
     textAlign: 'right',
     fontFamily: 'Poppins',
     fontWeight: 'bold',
     bottom: 3,
-    right: 30,
+    right: 28,
   },
   text3: {
     color: '#000',
@@ -182,52 +194,52 @@ const styles = StyleSheet.create({
     left: 20,
   },
   logingButton1: {
-    width: 180,
-    height: 180,
+    width: 170,
+    height: 160,
     backgroundColor: '#fff',
-    bottom: 550,
+    bottom: 570,
     borderRadius: 20,
     left: 20,
   },
   logingButton2: {
-    width: 180,
-    height: 180,
+    width: 170,
+    height: 160,
     backgroundColor: '#fff',
-    bottom: 535,
+    bottom: 545,
     borderRadius: 20,
     left: 20,
   },
   logingButton3: {
-    width: 180,
-    height: 180,
+    width: 170,
+    height: 160,
     backgroundColor: '#fff',
-    bottom: 517,
+    bottom: 520,
     borderRadius: 15,
     left: 20,
   },
   logingButton4: {
-    width:180,
-    height: 180,
+    width:170,
+    height: 160,
     backgroundColor: '#fff',
-    bottom: 1092,
+    bottom: 1050,
     borderRadius: 20,
-    left: 230,
+    left: 240,
   },
   logingButton5: {
-    width: 180,
-    height: 180,
+    width: 170,
+    height: 160,
     backgroundColor: '#fff',
-    bottom: 1075,
+    bottom: 1025,
     borderRadius: 20,
-    left: 230,
+    left: 240,
   },
   logingButton6: {
-    width: 180,
-    height: 180,
+    width: 170,
+    height: 160,
     backgroundColor: '#fff',
-    bottom: 1057,
+    bottom: 996,
     borderRadius: 20,
-    left: 230,
+    left: 240,
   },
   text7: {
     color: '#000',
@@ -248,5 +260,4 @@ const styles = StyleSheet.create({
     left: 10,
   },
 });
-
 export default KidsItems;

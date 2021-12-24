@@ -1,10 +1,8 @@
 import React from 'react';
-import {View, StyleSheet, Image, Text, Pressable} from 'react-native';
+import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
 
 function shoeScreen2({navigation}) {
-  const onPressHandler = () => {
-    navigation.navigate('Book');
-  };
+  
 
   return (
     <View style={styles.background}>
@@ -32,11 +30,14 @@ function shoeScreen2({navigation}) {
       </View>
       <Text style={styles.text5}>Rs.8490.00</Text>
       <Text style={styles.text6}>Island Wide Delivery Available</Text>
-      <Pressable onPress={onPressHandler}>
+      
+      
+      <TouchableOpacity onPress={() => navigation.navigate('paymentDetails')}>
         <View style={styles.logingButton}>
           <Text style={styles.text11}>Buy Now</Text>
         </View>
-      </Pressable>
+      </TouchableOpacity>
+      
     </View>
   );
 }

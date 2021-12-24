@@ -5,13 +5,12 @@ import {
   Image,
   Text,
   TextInput,
-  Pressable,
+  TouchableOpacity,
 } from 'react-native';
 
-function Payment({navigation}) {
-  const onPressHandler = () => {
-    navigation.navigate('Payment');
-  };
+const PaymentProcces = ({navigation})=> {
+ 
+  
   return (
     <View style={styles.background}>
       <Text style={styles.text}>Payment Details</Text>
@@ -36,11 +35,13 @@ function Payment({navigation}) {
       <View style={styles.logingButton4}>
         <TextInput style={styles.text6} placeholder="672" />
       </View>
-      <Pressable onPress={onPressHandler}>
+      
+      <TouchableOpacity onPress={() => navigation.navigate('paymentConfirmation')}>
         <View style={styles.logingButton5}>
-          <Text style={styles.text7}>Pay Now</Text>
+          <Text style={styles.text7}>Pay Here</Text>
         </View>
-      </Pressable>
+      </TouchableOpacity> 
+     
     </View>
   );
 }
@@ -48,7 +49,7 @@ function Payment({navigation}) {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    backgroundColor: '#BF93C8',
+    backgroundColor: '#E391A9',
   },
 
   text: {
@@ -165,7 +166,7 @@ const styles = StyleSheet.create({
     width: 130,
     height: 60,
     backgroundColor: '#8a246b',
-    bottom: 600,
+    bottom: 640,
     borderRadius: 10,
     left: 150,
     borderWidth: 1,
@@ -198,4 +199,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Payment;
+export default PaymentProcces;
